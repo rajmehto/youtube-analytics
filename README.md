@@ -1,164 +1,197 @@
-# YouTube Analytics Vision - Chrome Extension
+# 📊 YouTube Studio SEO Assistant
 
-A powerful Chrome extension similar to VidIQ Vision that provides real-time analytics, SEO insights, tags, engagement metrics, and competitor analysis directly on YouTube video pages.
+<p align="center">
+  <img src="https://img.shields.io/github/stars/rajmehto/youtube-analytics?style=for-the-badge&color=yellow" alt="Stars">
+  <img src="https://img.shields.io/github/forks/rajmehto/youtube-analytics?style=for-the-badge&color=blue" alt="Forks">
+  <img src="https://img.shields.io/badge/VERSION-1.0-green?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/LICENSE-MIT-red?style=for-the-badge" alt="License">
+</p>
 
-## 🚀 Features
+<p align="center">
+  <img src="https://img.shields.io/badge/DEVELOPER-RAJ%20MEHTO-purple?style=for-the-badge&logo=github" alt="Developer">
+  <img src="https://img.shields.io/badge/SPONSOR-💖-pink?style=for-the-badge" alt="Sponsor">
+</p>
 
-### Core Features (No API Required)
-- **📈 Real-time Engagement Metrics**: View counts, likes, engagement rates
-- **🏷️ Tag Extraction**: See all video tags (even hidden ones)
-- **🔑 Keyword Analysis**: Automatically extract top keywords from title and description
-- **💡 SEO Score**: Get instant SEO score for video optimization
-- **📊 Video Analytics**: Duration, category, upload date, and more
-- **🎨 Beautiful UI**: Clean, modern interface that matches YouTube's design
-- **⚡ Auto-detection**: Automatically loads on video pages and updates on navigation
+<p align="center">
+  <img src="https://img.shields.io/badge/CHROME-Extension-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome">
+  <img src="https://img.shields.io/badge/MANIFEST-V3-orange?style=flat-square" alt="Manifest V3">
+  <img src="https://img.shields.io/badge/PLATFORM-MACOS%20%7C%20WINDOWS%20%7C%20LINUX-green?style=flat-square" alt="Platform">
+</p>
 
-### 🆕 Monetization Features (v1.1)
-- **💰 Monetization Status**: Detect if channel is monetized
-- **💵 Earnings Estimation**: Estimate video earnings based on CPM and views
-- **📈 Subscriber Growth**: Estimate new subscribers from each video
-- **🎯 CPM Analysis**: Automatic CPM category detection (Premium/High/Medium/Low)
-- **📊 Conversion Tracking**: View-to-subscriber conversion rates
+<p align="center">
+  <b>Real-time SEO analysis & optimization for YouTube Studio with inline tag scoring</b>
+</p>
+
+---
+
+## 🎯 What is This?
+
+**YouTube Studio SEO Assistant** provides powerful tools to optimize your videos:
+
+- 📊 **SEO Score Analysis** - Real-time scoring (0-100) for your video
+- 🏷️ **Tag SEO Scoring** - Individual SEO scores for each tag with inline badges
+- ⚠️ **Issue Detection** - Identifies missing thumbnails, short descriptions, etc.
+- 💡 **Pro Tips** - Actionable suggestions to improve discoverability
+
+---
+
+## 📈 Features Comparison
+
+```mermaid
+graph TD
+    A[🎬 YouTube Studio SEO Assistant] --> B[📊 Upload Assistant]
+    A --> C[🏷️ Tag Analysis]
+    
+    B --> D[✅ SEO Score 0-100]
+    B --> E[⚠️ Warnings & Issues]
+    B --> F[💡 Pro Tips]
+    
+    C --> G[🔢 Individual Tag Scores]
+    C --> H[🎨 Color-coded Badges]
+    C --> I[📝 Scoring Reasons]
+```
+
+| Feature | Description | Points |
+|---------|-------------|--------|
+| 🏷️ **Tag in Title** | Tag appears in video title | +30 |
+| 📝 **Tag in Description** | Tag appears in description | +15 |
+| 🎯 **Long-tail Keyword** | 3+ words (more specific) | +20 |
+| 📏 **Good Length** | 10-30 characters optimal | +15 |
+| ⭐ **Primary Tag** | First tag bonus | +10 |
+| 📅 **Has Year** | Contains 2024/2025/2026 | +5 |
+
+---
+
+## 🎨 Color Coding
+
+| Score | Color | Status |
+|-------|-------|--------|
+| 70-100 | 🟢 Green | Excellent SEO |
+| 50-69 | 🟠 Orange | Good, can improve |
+| 30-49 | 🟠 Dark Orange | Needs work |
+| 0-29 | 🔴 Red | Poor SEO |
+
+---
 
 ## 📦 Installation
 
-### Method 1: Load Unpacked (Development)
+### Quick Start
 
-1. **Open Chrome Extensions page**:
-   - Go to `chrome://extensions/`
-   - Or click Menu → Extensions → Manage Extensions
+```bash
+# Clone the repository
+git clone https://github.com/rajmehto/youtube-analytics.git
 
-2. **Enable Developer Mode**:
-   - Toggle the "Developer mode" switch in the top right
+# Navigate to folder
+cd youtube-analytics
+```
 
-3. **Load the extension**:
-   - Click "Load unpacked"
-   - Navigate to the `youtube-analytics-extension` folder
-   - Click "Select"
+### Load in Chrome
 
-4. **Verify installation**:
-   - You should see "YouTube Analytics Vision" in your extensions list
-   - The extension icon should appear in your toolbar
+1. Open `chrome://extensions/`
+2. Enable **Developer Mode** (top right toggle)
+3. Click **Load unpacked**
+4. Select the `youtube-analytics` folder
+5. Done! Go to YouTube Studio 🎉
 
-### Method 2: Pack and Install (Production)
+---
 
-1. Go to `chrome://extensions/`
-2. Enable Developer Mode
-3. Click "Pack extension"
-4. Select the extension directory
-5. Install the generated `.crx` file
+## 🖥️ Screenshots
 
-## 🎯 Usage
+### Upload Assistant Panel
+```
+┌─────────────────────────────┐
+│  📊 Upload Assistant    [-] │
+├─────────────────────────────┤
+│         ╭───────╮           │
+│         │  75   │           │
+│         │ Score │           │
+│         ╰───────╯           │
+├─────────────────────────────┤
+│ 🚨 CRITICAL ISSUES (1)      │
+│ ┌─────────────────────────┐ │
+│ │ Thumbnail               │ │
+│ │ No custom thumbnail     │ │
+│ └─────────────────────────┘ │
+├─────────────────────────────┤
+│ ✅ STRENGTHS (2)            │
+│ • Category: Entertainment   │
+│ • Good number of tags (12)  │
+└─────────────────────────────┘
+```
 
-1. **Navigate to YouTube**: Open any YouTube video
-2. **View Analytics**: The analytics panel appears automatically on the right side
-3. **Toggle Panel**: Click the "−" button to collapse/expand the panel
-4. **Analyze Video**: View engagement metrics, tags, keywords, and SEO score
+### Inline Tag Badges
+```
+[gaming tutorial 75] [minecraft tips 2024 85] [how to build 60]
+```
 
-### What You'll See
+---
 
-- **Engagement Metrics**: Views, likes, engagement rate (color-coded)
-- **Tags**: All video tags including hidden ones
-- **Keywords**: Top 10 keywords extracted from content
-- **Video Info**: Category, upload date, duration
-- **SEO Score**: 0-100 score based on optimization factors
+## 🛠️ Tech Stack
 
-## 📊 SEO Score Breakdown
+| Technology | Usage |
+|------------|-------|
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Core Logic |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Styling |
+| ![Chrome](https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat-square&logo=googlechrome&logoColor=white) | Platform |
+| ![Manifest V3](https://img.shields.io/badge/Manifest-V3-orange?style=flat-square) | Extension Format |
 
-The SEO score (0-100) is calculated based on:
-
-- **Title Length** (20 points): Optimal 50-70 characters
-- **Tags** (25 points): More than 5 tags
-- **Description** (25 points): More than 250 characters
-- **Engagement Rate** (30 points): Higher is better
-
-## 🛠️ Technical Stack
-
-- **Manifest V3**: Latest Chrome extension format
-- **Vanilla JavaScript**: No external dependencies
-- **CSS3**: Modern styling with gradients and animations
-- **YouTube Data Extraction**: Parses YouTube's page data
+---
 
 ## 📁 Project Structure
 
 ```
-youtube-analytics-extension/
-├── manifest.json           # Extension configuration
-├── popup.html             # Extension popup UI
-├── README.md              # Documentation
-├── icons/                 # Extension icons (16x16, 48x48, 128x128)
-├── scripts/
-│   ├── content.js         # Main content script (runs on YouTube)
-│   ├── background.js      # Background service worker
-│   └── popup.js           # Popup functionality
-└── styles/
-    └── overlay.css        # Analytics overlay styles
+youtube-analytics/
+├── 📄 manifest.json          # Extension config
+├── 📄 popup.html             # Popup UI
+├── 📁 scripts/
+│   ├── 📄 studio-content.js  # Main YouTube Studio script
+│   ├── 📄 seo-analyzer.js    # SEO analysis logic
+│   ├── 📄 content.js         # Watch page script
+│   └── 📄 background.js      # Service worker
+├── 📁 styles/
+│   ├── 📄 studio-assistant.css
+│   └── 📄 overlay.css
+└── 📁 icons/
+    └── 🖼️ icon16/48/128.png
 ```
-
-## 🔧 Development
-
-### Adding New Features
-
-1. **Edit content.js**: Add data extraction logic
-2. **Update overlay.css**: Style new UI components
-3. **Modify manifest.json**: Add new permissions if needed
-4. **Test**: Reload extension in `chrome://extensions/`
-
-### Debugging
-
-- Open Chrome DevTools on YouTube page
-- Check Console for logs (search for "YouTube Analytics Vision")
-- Use `chrome://extensions/` to view errors
-- Enable "Developer mode" for detailed error messages
-
-## 🚀 Future Enhancements
-
-- [ ] Competitor video comparison
-- [ ] Historical trend analysis
-- [ ] Export analytics to CSV/JSON
-- [ ] Integration with YouTube Analytics API
-- [ ] Channel-level analytics
-- [ ] Comment sentiment analysis
-- [ ] Thumbnail A/B testing suggestions
-- [ ] Best posting time recommendations
-- [ ] Keyword rank tracking
-- [ ] Video performance predictions
-
-## 📝 Notes
-
-- **Privacy**: This extension only reads publicly available data from YouTube pages
-- **Permissions**: Requires access to YouTube domains only
-- **Performance**: Minimal impact on page load times
-- **Compatibility**: Works with YouTube's current UI (2026)
-
-## 🐛 Troubleshooting
-
-**Panel not showing?**
-- Refresh the YouTube page
-- Check if extension is enabled in `chrome://extensions/`
-- Ensure you're on a video page (`/watch?v=...`)
-
-**Data not accurate?**
-- YouTube's UI changes frequently; some selectors may need updates
-- Engagement rate requires visible like counts
-
-**Extension not loading?**
-- Check for errors in `chrome://extensions/`
-- Ensure all files are in correct locations
-- Verify manifest.json syntax
-
-## 📄 License
-
-This project is for educational purposes. YouTube and VidIQ are trademarks of their respective owners.
-
-## 🤝 Contributing
-
-Feel free to enhance this extension with:
-- Better data extraction algorithms
-- More analytics features
-- UI/UX improvements
-- Bug fixes
 
 ---
 
-**Made with ❤️ for YouTube creators**
+## 🚀 Roadmap
+
+- [x] Real-time SEO scoring
+- [x] Tag SEO analysis with badges
+- [x] Category detection
+- [x] Thumbnail detection
+- [ ] Competitor analysis
+- [ ] Trend suggestions
+- [ ] A/B title testing
+- [ ] Export analytics
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Feel free to:
+
+- 🐛 Report bugs
+- 💡 Suggest features  
+- 🔧 Submit PRs
+
+---
+
+## 📄 License
+
+```
+MIT License - Feel free to use and modify
+```
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for YouTube Creators</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/rajmehto">⭐ Star this repo if it helped you!</a>
+</p>
