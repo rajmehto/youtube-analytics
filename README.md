@@ -26,12 +26,16 @@
 
 ## 🎯 What is This?
 
-**YouTube Studio SEO Assistant** provides powerful tools to optimize your videos:
+<p align="center">
+<b>YouTube Studio SEO Assistant</b> provides powerful tools to optimize your videos:
+</p>
 
-- 📊 **SEO Score Analysis** - Real-time scoring (0-100) for your video
-- 🏷️ **Tag SEO Scoring** - Individual SEO scores for each tag with inline badges
-- ⚠️ **Issue Detection** - Identifies missing thumbnails, short descriptions, etc.
-- 💡 **Pro Tips** - Actionable suggestions to improve discoverability
+<p align="center">
+📊 <b>SEO Score Analysis</b> - Real-time scoring (0-100) for your video<br>
+🏷️ <b>Tag SEO Scoring</b> - Individual SEO scores for each tag with inline badges<br>
+⚠️ <b>Issue Detection</b> - Identifies missing thumbnails, short descriptions, etc.<br>
+💡 <b>Pro Tips</b> - Actionable suggestions to improve discoverability
+</p>
 
 ---
 
@@ -51,25 +55,75 @@ graph TD
     C --> I[📝 Scoring Reasons]
 ```
 
-| Feature | Description | Points |
-|---------|-------------|--------|
-| 🏷️ **Tag in Title** | Tag appears in video title | +30 |
-| 📝 **Tag in Description** | Tag appears in description | +15 |
-| 🎯 **Long-tail Keyword** | 3+ words (more specific) | +20 |
-| 📏 **Good Length** | 10-30 characters optimal | +15 |
-| ⭐ **Primary Tag** | First tag bonus | +10 |
-| 📅 **Has Year** | Contains 2024/2025/2026 | +5 |
+<table align="center">
+<tr>
+<th>Feature</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+<tr>
+<td>🏷️ <b>Tag in Title</b></td>
+<td>Tag appears in video title</td>
+<td align="center"><code>+30</code></td>
+</tr>
+<tr>
+<td>📝 <b>Tag in Description</b></td>
+<td>Tag appears in description</td>
+<td align="center"><code>+15</code></td>
+</tr>
+<tr>
+<td>🎯 <b>Long-tail Keyword</b></td>
+<td>3+ words (more specific)</td>
+<td align="center"><code>+20</code></td>
+</tr>
+<tr>
+<td>📏 <b>Good Length</b></td>
+<td>10-30 characters optimal</td>
+<td align="center"><code>+15</code></td>
+</tr>
+<tr>
+<td>⭐ <b>Primary Tag</b></td>
+<td>First tag bonus</td>
+<td align="center"><code>+10</code></td>
+</tr>
+<tr>
+<td>📅 <b>Has Year</b></td>
+<td>Contains 2024/2025/2026</td>
+<td align="center"><code>+5</code></td>
+</tr>
+</table>
 
 ---
 
 ## 🎨 Color Coding
 
-| Score | Color | Status |
-|-------|-------|--------|
-| 70-100 | 🟢 Green | Excellent SEO |
-| 50-69 | 🟠 Orange | Good, can improve |
-| 30-49 | 🟠 Dark Orange | Needs work |
-| 0-29 | 🔴 Red | Poor SEO |
+<table align="center">
+<tr>
+<th>Score</th>
+<th>Color</th>
+<th>Status</th>
+</tr>
+<tr>
+<td align="center"><code>70-100</code></td>
+<td align="center">🟢 Green</td>
+<td>Excellent SEO</td>
+</tr>
+<tr>
+<td align="center"><code>50-69</code></td>
+<td align="center">🟠 Orange</td>
+<td>Good, can improve</td>
+</tr>
+<tr>
+<td align="center"><code>30-49</code></td>
+<td align="center">🟠 Dark Orange</td>
+<td>Needs work</td>
+</tr>
+<tr>
+<td align="center"><code>0-29</code></td>
+<td align="center">🔴 Red</td>
+<td>Poor SEO</td>
+</tr>
+</table>
 
 ---
 
@@ -128,12 +182,28 @@ cd youtube-analytics
 
 ## 🛠️ Tech Stack
 
-| Technology | Usage |
-|------------|-------|
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Core Logic |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Styling |
-| ![Chrome](https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat-square&logo=googlechrome&logoColor=white) | Platform |
-| ![Manifest V3](https://img.shields.io/badge/Manifest-V3-orange?style=flat-square) | Extension Format |
+<table align="center">
+<tr>
+<th>Technology</th>
+<th>Usage</th>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"></td>
+<td align="center">Core Logic</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"></td>
+<td align="center">Styling</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome"></td>
+<td align="center">Platform</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/Manifest-V3-orange?style=flat-square" alt="Manifest V3"></td>
+<td align="center">Extension Format</td>
+</tr>
+</table>
 
 ---
 
