@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Analytics Vision - Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #888;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .hint a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .hint a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .success-message,
+    .error-message {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .info-box {
+      background: #f8f9fa;
+      border-left: 4px solid #667eea;
+      padding: 16px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .info-box h4 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .info-box p {
+      color: #666;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .info-box ul {
+      margin: 10px 0 0 20px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .info-box li {
+      margin-bottom: 6px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: #4caf50;
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: 12px;
+    }
+
+    .status-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-left: 8px;
+    }
+
+    .status-indicator.active {
+      background: #4caf50;
+    }
+
+    .status-indicator.inactive {
+      background: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>⚙️ Settings & Configuration</h1>
+      <p>Configure YouTube Analytics Vision for advanced features</p>
+    </div>
+
+    <div class="content">
+      <div id="successMessage" class="success-message"></div>
+      <div id="errorMessage" class="error-message"></div>
+
+      <!-- API Configuration Section -->
+      <div class="section">
+        <h2 class="section-title">🔑 YouTube API Configuration</h2>
+        
+        <div class="info-box">
+          <h4>Why do I need an API key?</h4>
+          <p>A YouTube Data API v3 key unlocks advanced features:</p>
+          <ul class="feature-list">
+            <li>Real-time comment sentiment analysis</li>
+            <li>Competitor video comparison</li>
+            <li>Historical channel analytics</li>
+            <li>Best posting time recommendations</li>
+            <li>Performance predictions</li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+          <label for="apiKey">
+            YouTube Data API v3 Key
+            <span class="status-indicator" id="apiStatus"></span>
+          </label>
+          <input 
+            type="password" 
+            id="apiKey" 
+            placeholder="Enter your API key"
+          >
+          <div class="hint">
+            Don't have an API key? 
+            <a href="https://console.cloud.google.com/apis/credentials" target="_blank">
+              Get one from Google Cloud Console →
+            </a>
+          </div>
+        </div>
+
+        <button id="saveApiKey">Save API Key</button>
+        <button id="clearApiKey" style="margin-left: 10px; background: #dc3545;">Clear API Key</button>
+      </div>
+
+      <!-- How to Get API Key -->
+      <div class="section">
+        <h2 class="section-title">📖 How to Get a Free API Key</h2>
+        
+        <div class="info-box">
+          <h4>Step-by-Step Instructions:</h4>
+          <ol style="margin-left: 20px; color: #666; font-size: 13px; line-height: 1.8;">
+            <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a></li>
+            <li>Create a new project or select an existing one</li>
+            <li>Enable "YouTube Data API v3" for your project</li>
+            <li>Go to "Credentials" and click "Create Credentials"</li>
+            <li>Select "API Key"</li>
+            <li>Copy the generated API key</li>
+            <li>Paste it above and click "Save API Key"</li>
+          </ol>
+          <p style="margin-top: 12px;"><strong>Note:</strong> The free tier includes 10,000 quota units per day, which is enough for regular usage.</p>
+        </div>
+      </div>
+
+      <!-- Data Storage Section -->
+      <div class="section">
+        <h2 class="section-title">💾 Data Storage</h2>
+        
+        <div class="info-box">
+          <h4>Local Data Storage</h4>
+          <p>The extension stores analytics data locally in your browser using IndexedDB. This includes:</p>
+          <ul>
+            <li>Video performance history</li>
+            <li>Channel analytics snapshots</li>
+            <li>Keyword ranking trends</li>
+            <li>User preferences</li>
+          </ul>
+          <p style="margin-top: 12px;"><strong>Privacy:</strong> All data is stored locally. Nothing is sent to external servers.</p>
+        </div>
+
+        <button id="clearStorage" style="background: #dc3545;">Clear All Stored Data</button>
+      </div>
+
+      <!-- About Section -->
+      <div class="section">
+        <h2 class="section-title">ℹ️ About</h2>
+        
+        <div class="info-box">
+          <h4>YouTube Analytics Vision v1.0.0</h4>
+          <p>An advanced Chrome extension for YouTube creators and marketers. Get real-time insights, SEO analysis, competitor comparison, and performance predictions.</p>
+          <p style="margin-top: 12px;">
+            <strong>Features:</strong> Engagement metrics, Tag extraction, Keyword analysis, SEO scoring, Sentiment analysis, Competitor benchmarking, Data export, Thumbnail analysis, Performance predictions, and more!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/options.js"></script>
+</body>
+</html>

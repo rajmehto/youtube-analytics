@@ -1,0 +1,396 @@
+/* YouTube Studio Assistant Styles */
+
+.yt-studio-assistant-panel {
+  background: #282828;
+  border: 1px solid #3f3f3f;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 0 0 16px 0;
+  width: 100%;
+  max-width: 400px;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.assistant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3ea6ff;
+}
+
+.assistant-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #3ea6ff;
+}
+
+.assistant-toggle {
+  background: transparent;
+  border: 1px solid #3f3f3f;
+  color: #f1f1f1;
+  cursor: pointer;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.assistant-toggle:hover {
+  background: #3f3f3f;
+  border-color: #3ea6ff;
+}
+
+.assistant-content {
+  display: block;
+}
+
+.assistant-section {
+  margin-bottom: 24px;
+}
+
+.assistant-section:last-child {
+  margin-bottom: 0;
+}
+
+.assistant-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Score Circle */
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border: 6px solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.score-value {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* Issue Cards */
+.issue-card {
+  background: #1f1f1f;
+  border-left: 4px solid;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.issue-card:last-child {
+  margin-bottom: 0;
+}
+
+.issue-card.critical {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.05);
+}
+
+.issue-card.warning {
+  border-color: #ff9800;
+  background: rgba(255, 152, 0, 0.05);
+}
+
+.issue-header {
+  margin-bottom: 6px;
+}
+
+.issue-header strong {
+  color: #3ea6ff;
+  font-size: 13px;
+}
+
+.issue-message {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.issue-fix {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Strength Items */
+.strength-item {
+  background: rgba(43, 166, 64, 0.05);
+  border-left: 3px solid #2ba640;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.strength-item:last-child {
+  margin-bottom: 0;
+}
+
+.strength-icon {
+  color: #2ba640;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.strength-item strong {
+  color: #3ea6ff;
+}
+
+/* Tip Cards */
+.tip-card {
+  background: #1f1f1f;
+  border: 1px solid #3f3f3f;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.tip-card:last-child {
+  margin-bottom: 0;
+}
+
+.tip-card:hover {
+  border-color: #3ea6ff;
+  background: #252525;
+}
+
+.tip-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.tip-icon {
+  font-size: 18px;
+}
+
+.tip-header strong {
+  color: #f1f1f1;
+  font-size: 13px;
+}
+
+.tip-description {
+  margin: 0;
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stat-item {
+  background: #1f1f1f;
+  border: 1px solid #3f3f3f;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3ea6ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .yt-studio-assistant-panel {
+    padding: 16px;
+    margin: 16px;
+  }
+
+  .assistant-header h3 {
+    font-size: 18px;
+  }
+
+  .score-circle {
+    width: 100px;
+    height: 100px;
+    border-width: 5px;
+  }
+
+  .score-value {
+    font-size: 28px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tag SEO Analysis */
+.tags-seo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.tags-seo-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tags-seo-container::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 2px;
+}
+
+.tags-seo-container::-webkit-scrollbar-thumb {
+  background: #3f3f3f;
+  border-radius: 2px;
+}
+
+.tag-seo-item {
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.tag-seo-item:hover {
+  transform: translateX(2px);
+}
+
+.tag-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-name {
+  font-size: 13px;
+  color: #f1f1f1;
+  font-weight: 500;
+  flex: 1;
+  word-break: break-word;
+}
+
+.tag-score {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.tag-reasons {
+  font-size: 10px;
+  color: #888;
+  margin-top: 4px;
+  padding-left: 2px;
+}
+
+.tag-legend {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #3f3f3f;
+  font-size: 10px;
+  color: #888;
+}
+
+.tag-legend span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Light Mode Support (if Studio adds it) */
+@media (prefers-color-scheme: light) {
+  .yt-studio-assistant-panel {
+    background: #ffffff;
+    border-color: #e0e0e0;
+    color: #030303;
+  }
+
+  .assistant-toggle {
+    border-color: #e0e0e0;
+    color: #030303;
+  }
+
+  .assistant-toggle:hover {
+    background: #f5f5f5;
+  }
+
+  .issue-card,
+  .tip-card,
+  .stat-item {
+    background: #f9f9f9;
+    border-color: #e0e0e0;
+  }
+
+  .strength-item {
+    background: rgba(43, 166, 64, 0.1);
+  }
+
+  .issue-message,
+  .tip-description {
+    color: #606060;
+  }
+}

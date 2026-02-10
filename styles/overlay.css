@@ -1,0 +1,188 @@
+/* YouTube Analytics Vision - Overlay Styles */
+
+.yt-analytics-container {
+  background: #0f0f0f;
+  border: 1px solid #303030;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #f1f1f1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.yt-analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3ea6ff;
+}
+
+.yt-analytics-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3ea6ff;
+}
+
+.yt-analytics-toggle {
+  background: transparent;
+  border: 1px solid #303030;
+  color: #f1f1f1;
+  cursor: pointer;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.yt-analytics-toggle:hover {
+  background: #303030;
+  border-color: #3ea6ff;
+}
+
+.yt-analytics-content {
+  display: block;
+}
+
+.yt-analytics-section {
+  margin-bottom: 20px;
+}
+
+.yt-analytics-section:last-child {
+  margin-bottom: 0;
+}
+
+.yt-analytics-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.yt-analytics-metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #272727;
+}
+
+.yt-analytics-metric:last-child {
+  border-bottom: none;
+}
+
+.yt-analytics-metric .label {
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+.yt-analytics-metric .value {
+  color: #f1f1f1;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.yt-analytics-metric .value.high {
+  color: #2ba640;
+}
+
+.yt-analytics-metric .value.medium {
+  color: #ff9800;
+}
+
+.yt-analytics-metric .value.low {
+  color: #f44336;
+}
+
+.yt-analytics-tags,
+.yt-analytics-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag,
+.keyword {
+  background: #272727;
+  color: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  border: 1px solid #3a3a3a;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.tag:hover,
+.keyword:hover {
+  background: #3a3a3a;
+  border-color: #3ea6ff;
+  cursor: default;
+}
+
+.tag {
+  background: #1a4d7a;
+  border-color: #2563a8;
+}
+
+.keyword {
+  background: #4a1a7a;
+  border-color: #6325a8;
+}
+
+.yt-analytics-score {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.score-bar {
+  flex: 1;
+  height: 24px;
+  background: #272727;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #3a3a3a;
+}
+
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f44336 0%, #ff9800 50%, #2ba640 100%);
+  transition: width 0.3s ease;
+  border-radius: 12px;
+}
+
+.score-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3ea6ff;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* Dark theme adjustments for YouTube's dark mode */
+html[dark] .yt-analytics-container,
+html[darker-dark-theme] .yt-analytics-container,
+ytd-app[darker-dark-theme] .yt-analytics-container {
+  background: #0f0f0f;
+  border-color: #303030;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1280px) {
+  .yt-analytics-container {
+    font-size: 13px;
+  }
+  
+  .yt-analytics-header h3 {
+    font-size: 16px;
+  }
+}

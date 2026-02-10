@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Analytics Vision</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      padding: 20px;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .info-box h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #ffd700;
+    }
+
+    .info-box p {
+      font-size: 12px;
+      line-height: 1.5;
+      opacity: 0.95;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      padding: 8px 0;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .features li::before {
+      content: "✓";
+      margin-right: 8px;
+      color: #4ade80;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .status {
+      text-align: center;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+
+    .status.active {
+      background: rgba(74, 222, 128, 0.2);
+    }
+
+    .status-text {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon">📊</div>
+    <h1>YouTube Analytics Vision</h1>
+    <p>Enterprise-grade YouTube insights</p>
+  </div>
+
+  <div class="info-box">
+    <h3>🚀 Features</h3>
+    <ul class="features">
+      <li>Real-time engagement metrics</li>
+      <li>Video tags & keywords extraction</li>
+      <li>SEO score analysis</li>
+      <li>Competitor insights</li>
+      <li>Trend analysis</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <h3>📖 How to Use</h3>
+    <p>Navigate to any YouTube video page and the analytics panel will automatically appear on the right side of the video.</p>
+  </div>
+
+  <div class="status active">
+    <span class="status-text">✓ Extension Active</span>
+  </div>
+
+  <button class="btn" id="openYouTube">Open YouTube</button>
+
+  <div class="footer">
+    Version 1.0.0
+  </div>
+
+  <script src="scripts/popup.js"></script>
+</body>
+</html>
